@@ -1,14 +1,24 @@
 <template>
-  <div id="app" class="bg-gray-300 h-screen w-full p-12">
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>-->
+  <div id="app" class="flex bg-gray-900 text-white min-h-screen">
+    <sidebar-navigation />
+
+    <div class="w-full">
+      <transition name="page" mode="out-in">
+        <router-view />
+      </transition>
     </div>
-    <router-view />
   </div>
 </template>
+
 <script>
-export default {};
+import SidebarNavigation from "@/components/SidebarNavigation";
+
+export default {
+  components: {
+    SidebarNavigation
+  }
+};
 </script>
-<style lang="scss">
-</style>
+
+
+

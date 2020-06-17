@@ -3,7 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./assets/css/tailwind.css";
+import VueGlide from "vue-glide-js";
+import "vue-glide-js/dist/vue-glide.css";
 
+Vue.use(VueGlide);
 Vue.config.productionTip = false;
 
 new Vue({
